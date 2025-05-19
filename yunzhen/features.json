@@ -1,0 +1,8 @@
+[
+  { "name": "天氣播報", "icon": "fa-cloud-sun" },
+  { "name": "收支管理", "icon": "fa-wallet" },
+  { "name": "生活紀錄", "icon": "fa-heartbeat" },
+  { "name": "提醒與行程", "icon": "fa-calendar-alt" },
+  { "name": "回憶與故事", "icon": "fa-book-open" },
+  { "name": "外部連結", "icon": "fa-external-link-alt" }
+]

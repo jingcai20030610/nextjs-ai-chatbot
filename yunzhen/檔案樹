@@ -1,0 +1,21 @@
+yunzhen/
+├── index.html
+├── style.css
+└── images/
+    ├── weather.png
+    ├── finance.png
+    ├── habits.png
+    ├── calendar.png
+    ├── memory.png
+    └── links.png
+/your-project/
+│
+├── index.html
+├── style.css
+└── images/
+    ├── weather.png
+    ├── finance.png
+    ├── habits.png
+    ├── calendar.png
+    ├── memory.png
+    └── links.png

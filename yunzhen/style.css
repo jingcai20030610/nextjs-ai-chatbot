@@ -1,0 +1,81 @@
+body {
+  font-family: 'Microsoft JhengHei', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+header {
+  background-color: #005f73;
+  color: white;
+  padding: 1em 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5em;
+  padding: 2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feature {
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 1em;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+}
+
+.feature img {
+  width: 80px;
+  height: 80px;
+}
+
+.feature span {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 對話氣泡樣式 */
+.bubble {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 1em auto;
+  max-width: 600px;
+  padding: 1em;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-right: 1em;
+}
+
+.message {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1em 1.5em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+}
+
+footer {
+  background-color: #e9ecef;
+  padding: 1em;
+  margin-top: 2em;
+  font-size: 14px;
+}
