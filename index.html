@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>妘臻 AI 小精靈</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>妘臻 AI 響應式主畫面</h1>
+    </header>
+
+    <main>
+      <div class="grid-container">
+        <div
+          class="feature"
+          v-for="(feature, index) in features"
+          :key="index"
+          @click="selectFeature(feature)"
+        >
+          <img :src="feature.icon" :alt="feature.name" />
+          <span>{{ feature.name }}</span>
+        </div>
+      </div>
+
+      <!-- 妘臻 AI 對話氣泡 -->
+      <div class="bubble" v-if="selectedFeature">
+        <img src="images/ai_avatar.png" alt="妘臻 AI" class="avatar" />
+        <div class="message">
+          {{ selectedFeature.reply }}
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 妘臻 AI 專案</p>
+    </footer>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        selectedFeature: null,
+        features: [
+          {
+            name: '天氣播報',
+            icon: 'images/weather.png',
+            reply: '今天陽光普照，記得戴墨鏡出門 ☀️'
+          },
+          {
+            name: '收支管理',
+            icon: 'images/finance.png',
+            reply: '今天記得記帳唷，不然月底會餓肚子 😅'
+          },
+          {
+            name: '生活習慣',
+            icon: 'images/habits.png',
+            reply: '喝水了嗎？保持健康的習慣最重要 💧'
+          },
+          {
+            name: '備忘與行事曆',
+            icon: 'images/calendar.png',
+            reply: '提醒你今天 3 點有會議，要準時喔 📅'
+          },
+          {
+            name: '故事與回憶',
+            icon: 'images/memory.png',
+            reply: '昨天的照片好美，想不想回憶一下呢 📷'
+          },
+          {
+            name: '外部連結',
+            icon: 'images/links.png',
+            reply: '幫你打開常用連結中，請稍等 🔗'
+          }
+        ]
+      },
+      methods: {
+        selectFeature(feature) {
+          this.selectedFeature = feature;
+          console.log('你選擇了：', feature.name);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
